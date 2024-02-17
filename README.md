@@ -285,17 +285,7 @@ sed -n -e '3p' file23
 sed -n -e '$p' file23
 ## OUTPUT
 ```
-1002 | tom |  5000 | Admin
-localhost:~# sed  -e 's/Ram/Sita/' file23
-1001 | Sita | 10000 | HR
-1001 | Sita | 10000 | HR
-1002 | tom |  5000 | Admin
-1003 | Joe |  7000 | Developer
-1005 | Sam |  5000 | HR
-1004 | Sit |  7000 | Dev
-1003 | Joe |  7000 | Developer
-1001 | Sita | 10000 | HR
-^d
+
 ```
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
