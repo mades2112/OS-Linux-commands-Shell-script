@@ -528,11 +528,10 @@ gzip backup.tar
 ```
 ls .gz
 ## OUTPUT
- 
+backup.tar.gz 
 gunzip backup.tar.gz
 ## OUTPUT
-
- 
+backup.tar 
 # Shell Script
 ```
 echo '#!/bin/sh'>my-script.sh
@@ -541,10 +540,7 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-```
-#!/bin/sh
-echo Hello World
-``` 
+Hello World
 cat << stop > herecheck.txt
 ```
 hello in this world
@@ -555,8 +551,11 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
-
+```
+hello in this world
+i cant stop
+for this non stop movement
+```
 cat < scriptest.sh 
 ```bash
 \#!/bin/sh
