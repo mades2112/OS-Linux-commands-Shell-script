@@ -592,26 +592,29 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
- 
+```
+File name is ./scriptest.sh
+ File name is  scriptest.sh
+ First arg. is 1
+ Second arg. is 2
+ Third arg. is 3
+ Fourth arg. is
+ The $@ is  1 2 3
+ The $\# is  $#
+ The $$ is  124
+```
 ls file1
 ## OUTPUT
-
+ file1
 echo $?
 ## OUTPUT 
-./one
-bash: ./one: Permission denied
- 
+0
 echo $?
-## OUTPUT 
- 
-abcd
- 
+## OUTPUT  
+abcd 
 echo $?
  ## OUTPUT
-
-
- 
+1
 # mis-using string comparisons
 
 cat < strcomp.sh 
@@ -641,15 +644,21 @@ echo "$val1 is less than $val2"
 fi
 ```
 ##OUTPUT
-
-
-
+```
+val1=baseball
+ val2=hockey
+ if [ $val1 \> $val2 ]
+ then
+ echo "$val1 is greater than $val2"
+ else
+ echo "$val1 is less than $val2"
+ fi
+```
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
-
+ baseball is less than hockey
 # check file ownership
 cat < psswdperm.sh 
 ```bash
@@ -675,7 +684,7 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
-
+ You are the owner of the /etc/passwd file
 # check if with file location
 cat>ifnested.sh 
 ```bash
